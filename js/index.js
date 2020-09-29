@@ -7,6 +7,7 @@ const h1 = document.createElement("h1");
 const images = document.querySelectorAll("img");
 const buttons = document.querySelectorAll(".btn");
 const container = document.querySelector(".container");
+const destinations = document.querySelectorAll(".destination");
 
 //transitioning on load and click
 const handleBodyEvent = () => {
@@ -85,4 +86,18 @@ images.forEach((item) => {
 window.addEventListener("wheel", () => {
   body.style.backgroundColor = "pink";
   body.style.transition = "1s";
+});
+
+//stop propagation
+buttons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    alert("Clicked on a button!");
+  });
+});
+
+destinations.forEach((item) => {
+  item.addEventListener("click", () => {
+    alert("Clicked on a destination!");
+  });
 });
