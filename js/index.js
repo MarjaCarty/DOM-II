@@ -101,3 +101,10 @@ destinations.forEach((item) => {
     alert("Clicked on a destination!");
   });
 });
+
+//prevent defaults on link
+navLink.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+  });
+});
