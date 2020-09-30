@@ -6,7 +6,6 @@ const navLink = document.querySelectorAll(".nav-link");
 const h1 = document.createElement("h1");
 const images = document.querySelectorAll("img");
 const buttons = document.querySelectorAll(".btn");
-const container = document.querySelector(".container");
 const destinations = document.querySelectorAll(".destination");
 
 //transitioning on load and click
