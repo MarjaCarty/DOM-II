@@ -1,6 +1,7 @@
 let blocks = document.querySelectorAll(".block");
 let bigBlock = document.querySelector(".blocks");
 let blocksArray = Array.from(blocks);
+let down = false;
 
 let handler = (e) => {
   e.target.remove();
@@ -13,7 +14,11 @@ let handler = (e) => {
 };
 
 let moveHandler = (e) => {
-  
+  let originalPosition = 0;
+  setInterval(() => {
+    e.target.style.transform = `translateX(${originalPosition}%)`;
+    originalPosition += 5;
+  }, 100);
 };
 
 blocksArray.forEach((block) => {
